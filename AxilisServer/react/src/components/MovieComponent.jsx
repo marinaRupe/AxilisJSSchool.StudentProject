@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Header from './components/Header.jsx';
-import Footer from './components/Footer.jsx';
-import MovieList from './components/MovieList.jsx';
-import FilterBox from './components/FilterBox.jsx';
-import AddMovieBox from './components/AddMovieBox.jsx';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+import MovieList from './MovieList.jsx';
+import FilterBox from './FilterBox.jsx';
+import AddMovieBox from './AddMovieBox.jsx';
 import Loading from 'react-loading';
 import uuid from 'uuid/v4';
 import { Redirect } from 'react-router-dom';
