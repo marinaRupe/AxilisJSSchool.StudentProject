@@ -8,6 +8,7 @@ const UserService = require('../services/user.service');
 const UserViewModel = require('../viewModels/user.viewModel');
 
 function login(req, res) {
+    //ako nema usera dodaj ga, ako ima onda vrati filmove -> ulogiraj ga
 
 }
 /*
