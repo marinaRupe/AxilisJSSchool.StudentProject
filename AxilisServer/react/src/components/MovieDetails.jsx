@@ -6,7 +6,7 @@ class MovieDetails extends Component {
     let movie = this.props.movie;
         return(
             <div>
-                <span onClick={ () => this.props.toggleFavourite(movie.id, !movie.isFavourite} className={'glyphicon glyphicon-heart'+movie.isFavourite ? '':'-empty'} />
+                <span onClick={ () => this.props.toggleFavourite(movie.id, !movie.isFavourite)} className={'glyphicon glyphicon-heart'+movie.isFavourite ? '':'-empty'} />
                 <h1> {movie.Title} </h1>
                 <img src={movie.Poster} />
                 <h2> Plot </h2>
@@ -21,3 +21,5 @@ class MovieDetails extends Component {
         );
     }
 }
+
+export default MovieDetails;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavigationBar from './NavigationBar'
+import MovieList from "./MovieList";
 
 class SearchComponent extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class SearchComponent extends Component {
       <div>
         <h1>Search</h1>
         <NavigationBar />
+        <MovieList movies={ this.props.movies }/>
       </div>
     );
   }
