@@ -1,35 +1,14 @@
 import React, { Component } from 'react';
-import Movie from './Movie.jsx';
-
+import MovieListItem from './MovieListItem.jsx';
 
 class MovieList extends Component {
-  render() {
-    var movieComponents = this.props.movies.map((m, index) => {
-      return (<Movie key={ m._id } movie={ m } index={ index } setMovieWatchChangedEvent={ this.props.setMovieWatchChangedEvent } deleteMovieEvent={this.props.deleteMovieEvent}></Movie>);
+    render() {
+        let movies = this.props.movies;
+        var movieComponents = movies.map((m, index) => {
+      return (<MovieListItem key={ m._id } movie={ m } index={ index }></MovieListItem>);
     });
-
-    return (
-      <div className="row">
-        <div className="col-md-12">
-          <h3>Moji filmovi</h3>
-          <table className="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Watched</th>
-                <th>Remove</th>
-              </tr>
-            </thead>
-            <tbody>
-              { movieComponents }
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      );
-  }
+        return(
+            {movieComponents}
+        );
+    }
 }
-
-export default MovieList;
