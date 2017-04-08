@@ -46,7 +46,7 @@ class MovieComponent extends Component {
     let _this = this;
     let unauthorized = false;
 
-    fetch('http://localhost:3000/movie/all', {
+    fetch('/movie/all', {
       credentials: 'include'
     }).then((response) => {
         if (response.status === 401) {
