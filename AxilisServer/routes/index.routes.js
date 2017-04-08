@@ -40,7 +40,6 @@ router.get('/list', (req, res) => {
 				movies: _movies
 			});
 		});
-
 });
 
 module.exports = router;
