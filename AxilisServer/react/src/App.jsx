@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import MovieComponent from './components/MovieComponent';
 import LoginComponent from './components/LoginComponent';
-import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
+import FavoritesComponent from './components/FavoritesComponent';
+import SearchComponent from './components/SearchComponent';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+
+const logout = () => {
+  return (<h3>Logout</h3>);
+};
 
 const NotFound = () => {
   return (
@@ -11,23 +17,28 @@ const NotFound = () => {
 };
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
       <div>
-        <NavigationBar/>
       <Router>
         <div>
-          <Switch>
-            <Route exact path="/" component={ MovieComponent }/>
-            <Route exact path="/login" component={ LoginComponent }/>
-            <Route path="*" component={ NotFound } />
-          </Switch>
+          <Route exact path="/" component={FavoritesComponent} />
+          <Route exact path="/login" component={LoginComponent} />
+          <Route exact path="/favorites" component={FavoritesComponent} />
+          <Route path="/search" component={SearchComponent} />
+          <Route path="/logout" component={logout} />
+
         </div>
       </Router>
+
       </div>
     );
   }
+  //<Route path="*" component={ NotFound } />
 }
 
 export default App;

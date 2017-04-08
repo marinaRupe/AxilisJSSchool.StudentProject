@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavigLink = (props) => {
   return (
@@ -20,3 +21,5 @@ class MovieListItem extends Component {
         );
     }
 }
+
+export default MovieListItem;
